@@ -1,0 +1,557 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Daily Email Engine</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0A0A0A;--card:#141212;--well:#1A1616;--line:#2C2626;--ink:#F4EFEA;
+--body:#D2CBC4;--mute:#938C86;--red:#D2293B}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--body);font-family:'DM Sans',-apple-system,Helvetica,Arial,sans-serif;
+height:100vh;display:flex;flex-direction:column;overflow:hidden}
+header{padding:20px 26px 0;border-bottom:1px solid var(--line);flex:none}
+.eyebrow{font-size:10.5px;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:var(--red)}
+h1{font-size:25px;font-weight:700;letter-spacing:-.7px;color:var(--ink);margin:7px 0 3px}
+.sub{font-size:14px;color:var(--mute);margin-bottom:15px}
+.tabs{display:flex;gap:4px}
+.tab{background:none;border:0;border-bottom:2px solid transparent;color:var(--mute);
+font:inherit;font-size:14.5px;font-weight:500;padding:9px 15px;cursor:pointer}
+.tab.on{color:var(--ink);border-bottom-color:var(--red)}
+.tab .c{font-size:11.5px;color:var(--mute);background:var(--well);padding:2px 7px;
+border-radius:20px;margin-left:5px}
+main{flex:1;display:flex;min-height:0}
+aside{width:370px;flex:none;border-right:1px solid var(--line);display:flex;flex-direction:column}
+.meta{display:none;padding:11px 20px;font-size:12.5px;color:var(--mute);
+border-bottom:1px solid var(--line);line-height:1.5}
+.meta.on{display:block} .meta b{color:var(--ink)} .pp{color:var(--red)}
+.scroll{overflow-y:auto;flex:1}
+.list{display:none} .list.on{display:block}
+.row{display:flex;gap:12px;align-items:flex-start;width:100%;text-align:left;background:none;
+border:0;border-bottom:1px solid var(--line);color:inherit;font:inherit;padding:13px 18px;cursor:pointer}
+.row:hover{background:var(--card)}
+.row.sel{background:var(--card);box-shadow:inset 3px 0 0 var(--red)}
+.n{font-size:11.5px;font-weight:700;color:var(--mute);min-width:22px;padding-top:2px}
+.row.sel .n{color:var(--red)}
+.tx{flex:1;min-width:0}
+.s{display:block;font-size:14.5px;font-weight:500;color:var(--ink);line-height:1.35}
+.p{display:block;font-size:12.5px;color:var(--mute);margin-top:3px;line-height:1.4}
+.m{font-size:9px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--red);
+border:1px solid rgba(210,41,59,.4);border-radius:3px;padding:2px 5px;flex:none;margin-top:2px}
+section{flex:1;background:#060606;display:flex;flex-direction:column;min-width:0}
+.bar{padding:11px 22px;border-bottom:1px solid var(--line);font-size:12.5px;color:var(--mute);
+display:flex;justify-content:space-between;align-items:center;gap:16px;flex:none}
+.bar b{color:var(--ink);font-weight:500}
+.note{font-size:11.5px;color:#6B6460}
+iframe{flex:1;width:100%;border:0;background:var(--bg)}
+@media(max-width:860px){main{flex-direction:column}aside{width:100%;max-height:44vh}}
+</style></head><body>
+<header>
+  <p class="eyebrow">Anna Kristina</p>
+  <h1>Daily Email Engine</h1>
+  <p class="sub">120 value emails across three sequences. Pick one to read it exactly as it lands in the inbox.</p>
+  <div class="tabs"><button class="tab on" data-t="A">Cold <span class="c">60</span></button><button class="tab" data-t="B">Warm <span class="c">30</span></button><button class="tab" data-t="C">Buyer <span class="c">30</span></button></div>
+</header>
+<main>
+  <aside><div class="meta on" id="MA"><b>Cold</b> &middot; Never bought, unknown, never engaged &middot; <span class="pp">19,349 people</span></div><div class="meta" id="MB"><b>Warm</b> &middot; Free app users, cancelled, buyers under $200 &middot; <span class="pp">3,946 people</span></div><div class="meta" id="MC"><b>Buyer</b> &middot; Buyers over $200 and active app subscribers &middot; <span class="pp">604 people</span></div><div class="scroll"><div class="list on" id="LA"><button class="row" data-id="A1">
+          <span class="n">1</span>
+          <span class="tx"><span class="s">Here&#x27;s what men actually want</span>
+          <span class="p">It&#x27;s not what you&#x27;ve been told.</span></span></button>
+<button class="row" data-id="A2">
+          <span class="n">2</span>
+          <span class="tx"><span class="s">Most women get attraction backwards</span>
+          <span class="p">You cannot give your way into being wanted.</span></span></button>
+<button class="row" data-id="A3">
+          <span class="n">3</span>
+          <span class="tx"><span class="s">Why he got bored of the perfect girlfriend</span>
+          <span class="p">Perfect is a flat line.</span></span></button>
+<button class="row" data-id="A4">
+          <span class="n">4</span>
+          <span class="tx"><span class="s">The chemical that makes a man commit</span>
+          <span class="p">It isn&#x27;t love and it isn&#x27;t sex.</span></span><span class="m">mention</span></button>
+<button class="row" data-id="A5">
+          <span class="n">5</span>
+          <span class="tx"><span class="s">Men bond through effort, not affection</span>
+          <span class="p">Nothing free ever gets valued.</span></span></button>
+<button class="row" data-id="A6">
+          <span class="n">6</span>
+          <span class="tx"><span class="s">Why he remembers the girl who left</span>
+          <span class="p">Unfinished things don&#x27;t close.</span></span></button>
+<button class="row" data-id="A7">
+          <span class="n">7</span>
+          <span class="tx"><span class="s">Attention is not attraction</span>
+          <span class="p">What does it actually cost him?</span></span></button>
+<button class="row" data-id="A8">
+          <span class="n">8</span>
+          <span class="tx"><span class="s">What makes a man feel like a man</span>
+          <span class="p">It&#x27;s not being needed.</span></span></button>
+<button class="row" data-id="A9">
+          <span class="n">9</span>
+          <span class="tx"><span class="s">Being easy to love makes you easy to leave</span>
+          <span class="p">You cannot miss what never goes.</span></span></button>
+<button class="row" data-id="A10">
+          <span class="n">10</span>
+          <span class="tx"><span class="s">He does not want a challenge</span>
+          <span class="p">Stop playing hard to get.</span></span></button>
+<button class="row" data-id="A11">
+          <span class="n">11</span>
+          <span class="tx"><span class="s">Men do not actually want peace</span>
+          <span class="p">They want peace they earned.</span></span><span class="m">mention</span></button>
+<button class="row" data-id="A12">
+          <span class="n">12</span>
+          <span class="tx"><span class="s">What he notices before you speak</span>
+          <span class="p">You&#x27;ve already been read.</span></span></button>
+<button class="row" data-id="A13">
+          <span class="n">13</span>
+          <span class="tx"><span class="s">Your texts are doing the opposite</span>
+          <span class="p">Fast is not warm.</span></span></button>
+<button class="row" data-id="A14">
+          <span class="n">14</span>
+          <span class="tx"><span class="s">Why he keeps you but will not commit</span>
+          <span class="p">He&#x27;s already got it all.</span></span></button>
+<button class="row" data-id="A15">
+          <span class="n">15</span>
+          <span class="tx"><span class="s">Men test with silence, not words</span>
+          <span class="p">That quiet was a question.</span></span></button>
+<button class="row" data-id="A16">
+          <span class="n">16</span>
+          <span class="tx"><span class="s">Why he was obsessed for three weeks</span>
+          <span class="p">Then it just stopped.</span></span><span class="m">mention</span></button>
+<button class="row" data-id="A17">
+          <span class="n">17</span>
+          <span class="tx"><span class="s">What he means by &quot;I&#x27;m not ready&quot;</span>
+          <span class="p">He&#x27;s not talking about relationships.</span></span></button>
+<button class="row" data-id="A18">
+          <span class="n">18</span>
+          <span class="tx"><span class="s">The real reason he came back</span>
+          <span class="p">It&#x27;s not what it feels like.</span></span></button>
+<button class="row" data-id="A19">
+          <span class="n">19</span>
+          <span class="tx"><span class="s">Why he is different around his friends</span>
+          <span class="p">That&#x27;s the honest version.</span></span></button>
+<button class="row" data-id="A20">
+          <span class="n">20</span>
+          <span class="tx"><span class="s">He is not confused. He is comfortable</span>
+          <span class="p">Confusion is the polite word.</span></span></button>
+<button class="row" data-id="A21">
+          <span class="n">21</span>
+          <span class="tx"><span class="s">Your nervous system is doing the dating</span>
+          <span class="p">Confidence isn&#x27;t a decision.</span></span><span class="m">mention</span></button>
+<button class="row" data-id="A22">
+          <span class="n">22</span>
+          <span class="tx"><span class="s">Why you feel calm around men you do not want</span>
+          <span class="p">The spark might be a warning.</span></span></button>
+<button class="row" data-id="A23">
+          <span class="n">23</span>
+          <span class="tx"><span class="s">The 2am spiral has a reason</span>
+          <span class="p">It&#x27;s chemistry, not insight.</span></span></button>
+<button class="row" data-id="A24">
+          <span class="n">24</span>
+          <span class="tx"><span class="s">How to calm down without your phone</span>
+          <span class="p">Ninety seconds, four inputs.</span></span></button>
+<button class="row" data-id="A25">
+          <span class="n">25</span>
+          <span class="tx"><span class="s">Why you cannot stop checking</span>
+          <span class="p">It&#x27;s built like a slot machine.</span></span></button>
+<button class="row" data-id="A26">
+          <span class="n">26</span>
+          <span class="tx"><span class="s">Your body knew before you did</span>
+          <span class="p">That feeling was data.</span></span></button>
+<button class="row" data-id="A27">
+          <span class="n">27</span>
+          <span class="tx"><span class="s">The difference between love and relief</span>
+          <span class="p">One of them is a trap.</span></span></button>
+<button class="row" data-id="A28">
+          <span class="n">28</span>
+          <span class="tx"><span class="s">Why bad men feel like home</span>
+          <span class="p">You&#x27;re not picking wrong by accident.</span></span><span class="m">mention</span></button>
+<button class="row" data-id="A29">
+          <span class="n">29</span>
+          <span class="tx"><span class="s">How to break an attachment</span>
+          <span class="p">Time alone does not do it.</span></span></button>
+<button class="row" data-id="A30">
+          <span class="n">30</span>
+          <span class="tx"><span class="s">Your anxiety is about the situation</span>
+          <span class="p">Not about you.</span></span></button>
+<button class="row" data-id="A31">
+          <span class="n">31</span>
+          <span class="tx"><span class="s">How to text a man</span>
+          <span class="p">The whole system, in one email.</span></span><span class="m">mention</span></button>
+<button class="row" data-id="A32">
+          <span class="n">32</span>
+          <span class="tx"><span class="s">What to say when he asks why you are distant</span>
+          <span class="p">Four words. Not five.</span></span></button>
+<button class="row" data-id="A33">
+          <span class="n">33</span>
+          <span class="tx"><span class="s">How to end a conversation first</span>
+          <span class="p">The last thirty seconds is what he keeps.</span></span></button>
+<button class="row" data-id="A34">
+          <span class="n">34</span>
+          <span class="tx"><span class="s">First date mistakes that decide everything</span>
+          <span class="p">Three of them are irreversible.</span></span></button>
+<button class="row" data-id="A35">
+          <span class="n">35</span>
+          <span class="tx"><span class="s">How to be interesting without performing</span>
+          <span class="p">It&#x27;s what you ask, not what you say.</span></span><span class="m">mention</span></button>
+<button class="row" data-id="A36">
+          <span class="n">36</span>
+          <span class="tx"><span class="s">How to win an argument without raising your voice</span>
+          <span class="p">Volume is a forfeit.</span></span></button>
+<button class="row" data-id="A37">
+          <span class="n">37</span>
+          <span class="tx"><span class="s">How to say no in four words</span>
+          <span class="p">Every extra clause is a negotiation.</span></span><span class="m">mention</span></button>
+<button class="row" data-id="A38">
+          <span class="n">38</span>
+          <span class="tx"><span class="s">How to slow down physically</span>
+          <span class="p">Access is not attachment.</span></span></button>
+<button class="row" data-id="A39">
+          <span class="n">39</span>
+          <span class="tx"><span class="s">How to leave a party</span>
+          <span class="p">The most underrated move there is.</span></span></button>
+<button class="row" data-id="A40">
+          <span class="n">40</span>
+          <span class="tx"><span class="s">How to be the woman other women like</span>
+          <span class="p">This is the highest status signal there is.</span></span></button>
+<button class="row" data-id="A41">
+          <span class="n">41</span>
+          <span class="tx"><span class="s">The five pillars</span>
+          <span class="p">One weak pillar is where he gets leverage.</span></span><span class="m">mention</span></button>
+<button class="row" data-id="A42">
+          <span class="n">42</span>
+          <span class="tx"><span class="s">Why you need your own money</span>
+          <span class="p">It changes your voice.</span></span></button>
+<button class="row" data-id="A43">
+          <span class="n">43</span>
+          <span class="tx"><span class="s">Your social life is your leverage</span>
+          <span class="p">A full calendar needs no explaining.</span></span></button>
+<button class="row" data-id="A44">
+          <span class="n">44</span>
+          <span class="tx"><span class="s">Your calendar is your boundary</span>
+          <span class="p">Decide on Tuesday, not Friday.</span></span></button>
+<button class="row" data-id="A45">
+          <span class="n">45</span>
+          <span class="tx"><span class="s">The hobby that changes how men see you</span>
+          <span class="p">He cannot buy this one.</span></span><span class="m">mention</span></button>
+<button class="row" data-id="A46">
+          <span class="n">46</span>
+          <span class="tx"><span class="s">How to be alone without being lonely</span>
+          <span class="p">This is the root skill.</span></span></button>
+<button class="row" data-id="A47">
+          <span class="n">47</span>
+          <span class="tx"><span class="s">What to do with an evening you used to give him</span>
+          <span class="p">The void is the actual problem.</span></span></button>
+<button class="row" data-id="A48">
+          <span class="n">48</span>
+          <span class="tx"><span class="s">Your inner world is the thing he cannot buy</span>
+          <span class="p">Stop narrating all of it.</span></span></button>
+<button class="row" data-id="A49">
+          <span class="n">49</span>
+          <span class="tx"><span class="s">Never be fully available again</span>
+          <span class="p">Rare is arithmetic, not a trick.</span></span></button>
+<button class="row" data-id="A50">
+          <span class="n">50</span>
+          <span class="tx"><span class="s">How to build a life no man can cage you in</span>
+          <span class="p">Dependency is the door.</span></span><span class="m">mention</span></button>
+<button class="row" data-id="A51">
+          <span class="n">51</span>
+          <span class="tx"><span class="s">The four types of women</span>
+          <span class="p">Work out which one you are.</span></span></button>
+<button class="row" data-id="A52">
+          <span class="n">52</span>
+          <span class="tx"><span class="s">The five kinds of men</span>
+          <span class="p">And what each one costs you.</span></span><span class="m">mention</span></button>
+<button class="row" data-id="A53">
+          <span class="n">53</span>
+          <span class="tx"><span class="s">Admiration is not attraction</span>
+          <span class="p">Two different circuits.</span></span></button>
+<button class="row" data-id="A54">
+          <span class="n">54</span>
+          <span class="tx"><span class="s">Green flags nobody talks about</span>
+          <span class="p">None of them look romantic.</span></span></button>
+<button class="row" data-id="A55">
+          <span class="n">55</span>
+          <span class="tx"><span class="s">How he treats a waiter is a warning</span>
+          <span class="p">Five years early.</span></span></button>
+<button class="row" data-id="A56">
+          <span class="n">56</span>
+          <span class="tx"><span class="s">Avoidant, or just not interested</span>
+          <span class="p">The two week test.</span></span><span class="m">mention</span></button>
+<button class="row" data-id="A57">
+          <span class="n">57</span>
+          <span class="tx"><span class="s">What to do when he breadcrumbs</span>
+          <span class="p">Stop eating the crumb.</span></span></button>
+<button class="row" data-id="A58">
+          <span class="n">58</span>
+          <span class="tx"><span class="s">How long to wait before you walk</span>
+          <span class="p">Set the date privately.</span></span></button>
+<button class="row" data-id="A59">
+          <span class="n">59</span>
+          <span class="tx"><span class="s">How to leave without a speech</span>
+          <span class="p">No closure conversation.</span></span><span class="m">mention</span></button>
+<button class="row" data-id="A60">
+          <span class="n">60</span>
+          <span class="tx"><span class="s">The woman you would be in a year</span>
+          <span class="p">If nothing changed.</span></span></button></div><div class="list" id="LB"><button class="row" data-id="B1">
+          <span class="n">1</span>
+          <span class="tx"><span class="s">You went quiet and he did not come back</span>
+          <span class="p">That was the answer, not the failure.</span></span></button>
+<button class="row" data-id="B2">
+          <span class="n">2</span>
+          <span class="tx"><span class="s">Why it worked for three weeks</span>
+          <span class="p">There&#x27;s a relapse point.</span></span><span class="m">mention</span></button>
+<button class="row" data-id="B3">
+          <span class="n">3</span>
+          <span class="tx"><span class="s">Pulling back is not punishing</span>
+          <span class="p">Same action, opposite result.</span></span></button>
+<button class="row" data-id="B4">
+          <span class="n">4</span>
+          <span class="tx"><span class="s">A boundary you want argued with</span>
+          <span class="p">He&#x27;s answering your hope.</span></span></button>
+<button class="row" data-id="B5">
+          <span class="n">5</span>
+          <span class="tx"><span class="s">What to do when he calls you cold</span>
+          <span class="p">Three words.</span></span><span class="m">mention</span></button>
+<button class="row" data-id="B6">
+          <span class="n">6</span>
+          <span class="tx"><span class="s">Detachment is not the goal</span>
+          <span class="p">Numb is not the same as regulated.</span></span></button>
+<button class="row" data-id="B7">
+          <span class="n">7</span>
+          <span class="tx"><span class="s">Why you feel worse after you win</span>
+          <span class="p">The pursuit was the reward.</span></span></button>
+<button class="row" data-id="B8">
+          <span class="n">8</span>
+          <span class="tx"><span class="s">The version of this that backfires</span>
+          <span class="p">Where the black cat becomes the black widow.</span></span></button>
+<button class="row" data-id="B9">
+          <span class="n">9</span>
+          <span class="tx"><span class="s">He changed and you did not trust it</span>
+          <span class="p">Your system is still on the old model.</span></span><span class="m">mention</span></button>
+<button class="row" data-id="B10">
+          <span class="n">10</span>
+          <span class="tx"><span class="s">The consequence ladder</span>
+          <span class="p">There are four rungs, not two.</span></span></button>
+<button class="row" data-id="B11">
+          <span class="n">11</span>
+          <span class="tx"><span class="s">How to let a good man in</span>
+          <span class="p">Calm is not the same as boring.</span></span></button>
+<button class="row" data-id="B12">
+          <span class="n">12</span>
+          <span class="tx"><span class="s">Reconditioning a man who took you for granted</span>
+          <span class="p">One thing has to change first.</span></span><span class="m">mention</span></button>
+<button class="row" data-id="B13">
+          <span class="n">13</span>
+          <span class="tx"><span class="s">How to reset without a conversation</span>
+          <span class="p">Changing it beats negotiating it.</span></span></button>
+<button class="row" data-id="B14">
+          <span class="n">14</span>
+          <span class="tx"><span class="s">The one conversation worth having</span>
+          <span class="p">Four sentences, once.</span></span></button>
+<button class="row" data-id="B15">
+          <span class="n">15</span>
+          <span class="tx"><span class="s">Why he commits to the woman who was leaving</span>
+          <span class="p">Not a threat. A departure.</span></span><span class="m">mention</span></button>
+<button class="row" data-id="B16">
+          <span class="n">16</span>
+          <span class="tx"><span class="s">How to be chased inside a relationship</span>
+          <span class="p">The chase does not have to end.</span></span></button>
+<button class="row" data-id="B17">
+          <span class="n">17</span>
+          <span class="tx"><span class="s">Keeping mystery after he knows everything</span>
+          <span class="p">Mystery is not information.</span></span></button>
+<button class="row" data-id="B18">
+          <span class="n">18</span>
+          <span class="tx"><span class="s">Why long term couples stop wanting each other</span>
+          <span class="p">Cohabitation removes the only ingredient.</span></span><span class="m">mention</span></button>
+<button class="row" data-id="B19">
+          <span class="n">19</span>
+          <span class="tx"><span class="s">How to handle his family</span>
+          <span class="p">They&#x27;re not rating your warmth.</span></span></button>
+<button class="row" data-id="B20">
+          <span class="n">20</span>
+          <span class="tx"><span class="s">How to handle his ex</span>
+          <span class="p">Three responses that end it.</span></span></button>
+<button class="row" data-id="B21">
+          <span class="n">21</span>
+          <span class="tx"><span class="s">How to handle his phone</span>
+          <span class="p">Looking costs you the position.</span></span><span class="m">mention</span></button>
+<button class="row" data-id="B22">
+          <span class="n">22</span>
+          <span class="tx"><span class="s">When he is in a bad season</span>
+          <span class="p">Support without absorbing.</span></span></button>
+<button class="row" data-id="B23">
+          <span class="n">23</span>
+          <span class="tx"><span class="s">Money without losing your softness</span>
+          <span class="p">Ask from standards, not from need.</span></span></button>
+<button class="row" data-id="B24">
+          <span class="n">24</span>
+          <span class="tx"><span class="s">How to ask and still be the prize</span>
+          <span class="p">Expectation, not plea.</span></span><span class="m">mention</span></button>
+<button class="row" data-id="B25">
+          <span class="n">25</span>
+          <span class="tx"><span class="s">When to be soft and when to be still</span>
+          <span class="p">Two modes, one signal.</span></span></button>
+<button class="row" data-id="B26">
+          <span class="n">26</span>
+          <span class="tx"><span class="s">You broke your own rule</span>
+          <span class="p">No penance required.</span></span></button>
+<button class="row" data-id="B27">
+          <span class="n">27</span>
+          <span class="tx"><span class="s">How to stop auditing yourself</span>
+          <span class="p">Performing it is still performing.</span></span></button>
+<button class="row" data-id="B28">
+          <span class="n">28</span>
+          <span class="tx"><span class="s">When you have outgrown him</span>
+          <span class="p">Love is not the question.</span></span></button>
+<button class="row" data-id="B29">
+          <span class="n">29</span>
+          <span class="tx"><span class="s">Are you ready for a serious man</span>
+          <span class="p">Ready is capacity, not desire.</span></span></button>
+<button class="row" data-id="B30">
+          <span class="n">30</span>
+          <span class="tx"><span class="s">The woman who gets picked twice</span>
+          <span class="p">Choosing is a different skill.</span></span><span class="m">mention</span></button></div><div class="list" id="LC"><button class="row" data-id="C1">
+          <span class="n">1</span>
+          <span class="tx"><span class="s">The ceiling you hit when it works</span>
+          <span class="p">Tactics change behaviour. They don&#x27;t change outcomes.</span></span><span class="m">mention</span></button>
+<button class="row" data-id="C2">
+          <span class="n">2</span>
+          <span class="tx"><span class="s">The same pattern, a different man</span>
+          <span class="p">You&#x27;re not meeting them. You&#x27;re choosing them.</span></span></button>
+<button class="row" data-id="C3">
+          <span class="n">3</span>
+          <span class="tx"><span class="s">Your mother&#x27;s marriage is in your body</span>
+          <span class="p">You learned it before you had words.</span></span></button>
+<button class="row" data-id="C4">
+          <span class="n">4</span>
+          <span class="tx"><span class="s">The part of you that does not want it</span>
+          <span class="p">Ambivalence has a function.</span></span><span class="m">mention</span></button>
+<button class="row" data-id="C5">
+          <span class="n">5</span>
+          <span class="tx"><span class="s">Self sabotage at the moment of getting it</span>
+          <span class="p">The system defends the familiar.</span></span></button>
+<button class="row" data-id="C6">
+          <span class="n">6</span>
+          <span class="tx"><span class="s">Why you pick men who are eighty percent</span>
+          <span class="p">The missing twenty is always the same thing.</span></span></button>
+<button class="row" data-id="C7">
+          <span class="n">7</span>
+          <span class="tx"><span class="s">What becoming magnetic costs</span>
+          <span class="p">Nobody mentions the price.</span></span><span class="m">mention</span></button>
+<button class="row" data-id="C8">
+          <span class="n">8</span>
+          <span class="tx"><span class="s">He is all in and you feel nothing</span>
+          <span class="p">The pursuit was the reward.</span></span></button>
+<button class="row" data-id="C9">
+          <span class="n">9</span>
+          <span class="tx"><span class="s">Grief after you get what you wanted</span>
+          <span class="p">You lose the woman who was waiting.</span></span></button>
+<button class="row" data-id="C10">
+          <span class="n">10</span>
+          <span class="tx"><span class="s">Choosing, instead of being chosen</span>
+          <span class="p">The last upgrade.</span></span><span class="m">mention</span></button>
+<button class="row" data-id="C11">
+          <span class="n">11</span>
+          <span class="tx"><span class="s">How to evaluate a man you could marry</span>
+          <span class="p">None of them are chemistry.</span></span></button>
+<button class="row" data-id="C12">
+          <span class="n">12</span>
+          <span class="tx"><span class="s">What to watch in the first ninety days</span>
+          <span class="p">It&#x27;s all visible early.</span></span></button>
+<button class="row" data-id="C13">
+          <span class="n">13</span>
+          <span class="tx"><span class="s">The conversations to have before a year</span>
+          <span class="p">Four, in this order.</span></span><span class="m">mention</span></button>
+<button class="row" data-id="C14">
+          <span class="n">14</span>
+          <span class="tx"><span class="s">Living together without losing yourself</span>
+          <span class="p">Three pillars have to stay standing.</span></span></button>
+<button class="row" data-id="C15">
+          <span class="n">15</span>
+          <span class="tx"><span class="s">The five pillars at thirty five</span>
+          <span class="p">Different stakes, less free time.</span></span></button>
+<button class="row" data-id="C16">
+          <span class="n">16</span>
+          <span class="tx"><span class="s">Money, power, and who decides</span>
+          <span class="p">Stated plainly, once.</span></span><span class="m">mention</span></button>
+<button class="row" data-id="C17">
+          <span class="n">17</span>
+          <span class="tx"><span class="s">How to be a wife and still be the prize</span>
+          <span class="p">The dynamic collapses at the ceremony.</span></span></button>
+<button class="row" data-id="C18">
+          <span class="n">18</span>
+          <span class="tx"><span class="s">Timelines without negotiating from fear</span>
+          <span class="p">Scarcity produces the outcome you fear.</span></span></button>
+<button class="row" data-id="C19">
+          <span class="n">19</span>
+          <span class="tx"><span class="s">You want children and he is unsure</span>
+          <span class="p">Unsure is an answer.</span></span><span class="m">mention</span></button>
+<button class="row" data-id="C20">
+          <span class="n">20</span>
+          <span class="tx"><span class="s">Leaving well</span>
+          <span class="p">It preserves your standing and your options.</span></span></button>
+<button class="row" data-id="C21">
+          <span class="n">21</span>
+          <span class="tx"><span class="s">The two year rule</span>
+          <span class="p">What six months hides.</span></span></button>
+<button class="row" data-id="C22">
+          <span class="n">22</span>
+          <span class="tx"><span class="s">Being the standard other women copy</span>
+          <span class="p">Social proof running the other way.</span></span></button>
+<button class="row" data-id="C23">
+          <span class="n">23</span>
+          <span class="tx"><span class="s">The friend who is where you were</span>
+          <span class="p">Teaching, not rescuing.</span></span></button>
+<button class="row" data-id="C24">
+          <span class="n">24</span>
+          <span class="tx"><span class="s">Your style as a signal</span>
+          <span class="p">It&#x27;s information, not decoration.</span></span></button>
+<button class="row" data-id="C25">
+          <span class="n">25</span>
+          <span class="tx"><span class="s">Voice, pace, and the authority of slowness</span>
+          <span class="p">It&#x27;s not what you say.</span></span></button>
+<button class="row" data-id="C26">
+          <span class="n">26</span>
+          <span class="tx"><span class="s">Rooms you have not been in yet</span>
+          <span class="p">Environment is the ceiling.</span></span></button>
+<button class="row" data-id="C27">
+          <span class="n">27</span>
+          <span class="tx"><span class="s">The most composed person in the conflict</span>
+          <span class="p">Composure is dominance, not kindness.</span></span></button>
+<button class="row" data-id="C28">
+          <span class="n">28</span>
+          <span class="tx"><span class="s">The long game of being unbothered</span>
+          <span class="p">Sustainable or suppressed?</span></span><span class="m">mention</span></button>
+<button class="row" data-id="C29">
+          <span class="n">29</span>
+          <span class="tx"><span class="s">What I do when I feel myself slipping</span>
+          <span class="p">I still do, by the way.</span></span></button>
+<button class="row" data-id="C30">
+          <span class="n">30</span>
+          <span class="tx"><span class="s">The woman you are now</span>
+          <span class="p">Name it precisely.</span></span><span class="m">mention</span></button></div></div></aside>
+  <section>
+    <div class="bar"><b id="now">A1</b><span class="note">Live preview. The animated panel plays three times and stops.</span></div>
+    <iframe id="fr" src="out/A1.html"></iframe>
+  </section>
+</main>
+<script>
+const fr=document.getElementById('fr'), now=document.getElementById('now');
+function pick(b){
+  document.querySelectorAll('.row').forEach(r=>r.classList.remove('sel'));
+  b.classList.add('sel');
+  const id=b.dataset.id;
+  fr.src='out/'+id+'.html';
+  now.textContent=id+'  '+b.querySelector('.s').textContent;
+}
+document.querySelectorAll('.row').forEach(b=>b.onclick=()=>pick(b));
+document.querySelectorAll('.tab').forEach(t=>t.onclick=()=>{
+  const k=t.dataset.t;
+  document.querySelectorAll('.tab').forEach(x=>x.classList.toggle('on',x===t));
+  document.querySelectorAll('.list').forEach(l=>l.classList.toggle('on',l.id==='L'+k));
+  document.querySelectorAll('.meta').forEach(m=>m.classList.toggle('on',m.id==='M'+k));
+});
+document.querySelector('.row').classList.add('sel');
+</script></body></html>
